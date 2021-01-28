@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       monsters: [],
       searchField: ''
-    }
+    };
   }
 
   componentDidMount() {
@@ -33,10 +33,7 @@ class App extends Component {
     return (
       <div className='App'>
         <h1>Monsters Rolodex</h1>
-        <SearchBox 
-          placeholder='Search Monsters'
-          onSearchChange={this.onSearchChange}
-        />
+        <SearchBox onSearchChange={this.onSearchChange} />
         <CardList monsters={filteredMonsters} />
       </div>
     );
